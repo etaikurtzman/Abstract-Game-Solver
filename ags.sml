@@ -12,7 +12,6 @@ functor AgsFun (structure Game : GAME) :>
     let val p = Game.whoseturn state
         val opp = Player.otherplayer p
 
-        (*the following 6 functions are outlined in the spec *)
         fun extractOutcome { recommendation = r, expectedOutcome = oc } = oc
         fun postAdvice m = advice (Game.makemove state m)
         fun currPlayerWins oc = oc = Player.WINS p
